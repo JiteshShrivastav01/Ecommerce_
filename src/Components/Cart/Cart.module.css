@@ -1,0 +1,52 @@
+.cartHead{display: grid;grid-template-columns:20% 60% 20%;align-items: center;}
+.heading{
+    text-align: center;grid-column: 2/3;
+}
+.cartClose{display: flex;justify-content: center;width: 3rem;height: 3rem;align-items: center;}
+.scroll{
+    max-height:300px;
+    overflow: auto;
+}
+.table{
+    border-collapse: collapse;width: 100%;margin-top: 2rem;font-size: 1.2rem;padding: 0.4rem;
+}
+
+.headingRow{
+    text-align: center; margin: 5px 15px; padding: 1rem;border-bottom: 3px solid black;
+}
+.tr{
+    border-bottom: 1px solid black;padding: 0.5rem;
+}
+.Item{
+    display: grid;grid-template-columns:1fr 1fr;justify-content: center;align-items: center;
+    padding: 0.5rem;
+}
+.img{width:80px}
+.Title{justify-content: center;font-size: 1rem;margin-left: 0.3rem;}
+.Price{
+    text-align: center; padding: 1rem 0.5rem;
+}
+.Quantity{
+   text-align: center;
+}
+.QuantityInput{width: 3.5rem;text-align: center;}
+
+.purchaseButton{
+    display: flex;justify-content: center; margin: 3rem;
+}
+.amount{display: flex;justify-content: flex-end;margin-top: 0.2rem;margin-right:0.4rem;}
+
+@media screen and (max-width:568px) {
+    .img{width:60px;height: 60px;}
+    .QuantityInput{width: 3rem;}
+}
+
+@media screen and (max-width:468px) {
+    .img{width:40px;height: 40px;}
+    .QuantityInput{width: 2.5rem;}
+    .Item{display: grid;grid-template-columns: 1fr 2fr;}
+}
+
+@media screen and (max-width:420px) {
+    .img{display: none;}
+}

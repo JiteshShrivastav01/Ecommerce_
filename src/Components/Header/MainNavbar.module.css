@@ -1,0 +1,107 @@
+.navbar{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 0.3rem solid rgb(240, 92, 92);
+    background-color: black;
+}
+.logo-name{
+    grid-column: 1/2;justify-content: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;
+}
+.menu-list{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;justify-content: space-evenly;
+}
+
+.list{width: 100%;margin: 0 10px;display: grid;justify-content: space-evenly}
+.list a{
+    text-decoration: none;color: white;width:100%;text-align: center;
+}
+.list a:hover{
+    font-size: 1rem;
+    background-color:white;color:black;width: 150%;
+}
+.btn{
+    display: grid; justify-content: center;
+}
+.cart-button{display: grid;}
+.cartCircle {
+    width: 24px;height: 24px;
+    border-radius: 50%;background-color: red;
+    display: flex;align-items: center;justify-content: center;
+    color: white;font-weight: bold;
+  }
+.toggleMenu{
+    display:none;
+    color: white;
+    border: none;
+    background: transparent;
+    background-position: 0%
+}
+
+@media screen and (max-width : 568px){
+    .navbar{
+        display: grid;grid-template-columns: 40% 60%;
+        justify-content: space-between;
+    }
+    .logo-name{
+        font-size: 1.4rem;
+    }
+    .menu-list{
+        display: none;
+    }
+
+    .btn{
+        grid-template-columns:2/3;
+        display:grid;grid-template-columns: 3fr 1fr;
+        align-items: center;
+    }
+    .cart-button{
+        justify-content: flex-end;
+    }
+    .toggleMenu{
+        grid-column: 2/3;margin-left: 1rem;
+        display: grid;
+        align-items: center;
+    }
+
+    
+    .mobile-menu-list{
+        background-color: rgb(241, 218, 218); font-size: 1rem;
+        grid-row: 2/3;left: 0;top:0;
+        grid-column: 1/3;
+        width: 100%;height: 100%;
+        justify-content: center;align-items: center;margin-top: 1rem;margin-bottom: 0;
+        display: grid;grid-template-columns: 100%;justify-content: center;align-items:center;
+        z-index: 10;
+        animation: slideDown 0.3s ease-in-out forwards;
+    }
+
+    .list{
+        width: 100%;
+        margin-left: 0;padding: 0.5rem 0rem;
+        border-bottom: 1px solid white;margin-bottom: 0;
+    }
+    .list a{color: black;}
+    .list:hover{
+        background-color: black;
+    }
+    .list:hover a{color:white;background:none;width: 100%;text-align: center;}
+}
+    
+@keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
