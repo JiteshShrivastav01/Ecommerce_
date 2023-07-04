@@ -25,7 +25,7 @@ const Cart=(props)=>{
            <div className={classes.cartHead}>
               <h1 className={classes.heading}>Cart</h1>
               <div className={classes.cartClose}>
-                <Button variant="danger" className='responsive-button' onClick={props.onClose}>X</Button>
+                <Button variant="danger" className={classes.responsiveBtn1} onClick={props.onClose}>X</Button>
               </div>
            </div>
            <div className={classes.scroll}>
@@ -52,7 +52,7 @@ const Cart=(props)=>{
                             <input type="number" value={item.quantity} onChange={(event)=>QuantityHandler(event,item.name)} min={1} className={classes.QuantityInput} />
                         </td>
                         <td className="removeButton">
-                            <Button className='responsive-button' variant="danger" onClick={()=>RemoveItem(item.name)}>Remove</Button>
+                            <Button className={classes.responsiveBtn} variant="danger" onClick={()=>RemoveItem(item.name)}>Remove</Button>
                         </td>
                     </tr>
                 ))

@@ -11,14 +11,13 @@
     background-color: black;
 }
 .logo-name{
-    grid-column: 1/2;justify-content: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;
+    grid-column: 1/2;justify-content: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 2rem;color: white;
 }
 .menu-list{
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 33% 34% 33%;justify-content: space-evenly;
 }
-
 .list{width: 100%;margin: 0 10px;display: grid;justify-content: space-evenly}
 .list a{
     text-decoration: none;color: white;width:100%;text-align: center;
@@ -26,6 +25,10 @@
 .list a:hover{
     font-size: 1rem;
     background-color:white;color:black;width: 150%;
+}
+.active{
+    font-size: 1rem;color: black;padding: 0 10px;
+    background-color:rgb(107, 14, 14);width: 150%;
 }
 .btn{
     display: grid; justify-content: center;
@@ -36,7 +39,8 @@
     border-radius: 50%;background-color: red;
     display: flex;align-items: center;justify-content: center;
     color: white;font-weight: bold;
-  }
+}
+
 .toggleMenu{
     display:none;
     color: white;
@@ -51,7 +55,7 @@
         justify-content: space-between;
     }
     .logo-name{
-        font-size: 1.4rem;
+        font-size: 1.4rem;margin-left: 0.8rem;
     }
     .menu-list{
         display: none;
@@ -92,6 +96,7 @@
     .list:hover{
         background-color: black;
     }
+    
     .list:hover a{color:white;background:none;width: 100%;text-align: center;}
 }
     
