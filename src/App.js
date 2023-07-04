@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import About from './Pages/About';
 import RootPage from './Pages/RootPage';
 import CartContextProvider from './Components/Context/CartContextProvider';
+import Store from './Pages/Store';
 
 
 
@@ -12,8 +13,9 @@ const App=()=> {
     element : <RootPage/> ,
     children : [
       {path:'/' , element: <Home/>},
+      {path:'/store' , element : <Store/>},
       {path:'/About' , element : <About/>}
-    ]}
+    ]},
   ])
   return (
       <CartContextProvider>

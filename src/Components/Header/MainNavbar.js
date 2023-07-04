@@ -13,7 +13,7 @@ const MainNavbar = (props) => {
   return (
     <div className={classes.navbar}>
       <div className={classes['logo-name']}>
-        <Navbar.Brand style={{fontSize: '1.6rem',fontWeight:'bold'}} href="#home">MovieShow</Navbar.Brand>
+        <Navbar.Brand style={{fontSize: '1.6rem',fontWeight:'bold'}} href="#home">TheGenerics</Navbar.Brand>
       </div>
       <div className={showMenuList ? classes['mobile-menu-list'] : classes['menu-list']}>
         <li className={classes.list}>

@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import MainNavbar from "../Components/Header/MainNavbar";
 import MainFooter from "../Components/Header/MainFooter";
-import Header from "../Components/Header/Header";
 import CartContextProvider from "../Components/Context/CartContextProvider";
 import Cart from "../Components/Cart/Cart";
 import { useState } from "react";
@@ -14,7 +13,6 @@ const RootPage = () =>{
     return(
         <CartContextProvider>
           <MainNavbar onShow={showCartOnScreen}/>
-          <Header/>
           {showCart && <Cart  onClose={hideCart}/>}       
           <Outlet/>
           <MainFooter/>

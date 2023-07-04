@@ -1,0 +1,38 @@
+.header{
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    color: White;margin-top: 3rem;
+}
+
+.header1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.header2{
+    font-size: 1.5rem; display: flex; width: 20%;margin-left: 40%;
+    border: 1px solid  rgb(67, 186, 233); padding: 0.5rem 0.6rem; align-items: center;justify-content: center;
+}
+.playIcon{
+    margin-bottom: 1rem;color:  rgb(67, 186, 233);
+}
+
+.heading{
+    font-size: 2rem;text-align: center;margin: 0.7rem ;
+    font-family: Stencil Std, fantasy;
+}
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.tr{
+    margin: 0.5rem 1rem;text-align: center;
+    border-bottom: 1px solid skyblue;
+}
+
+.btn{
+    background-color: skyblue;color: white;padding: 0.5rem 1rem;
+    margin: 0.5rem ; border-radius: 0.5rem; border: none;text-transform: uppercase;
+}
+

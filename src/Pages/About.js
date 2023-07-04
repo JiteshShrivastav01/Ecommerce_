@@ -1,10 +1,13 @@
-
+import Header from '../Components/Header/Header'     
 import AboutContent from '../Components/About/AboutContent'
 
 
 const About=()=>{
     return(
-      <AboutContent/>
+     <>
+       <Header/>
+       <AboutContent/>
+     </>
     )
 }
 

@@ -1,11 +1,10 @@
-                                                                                                  
-import ProductsOnScreen from "../Components/Products/Product";
-
-
+import HomeContent from "../Components/Home/HomeContent";
 
 const Home=()=> {
   return (
-    <ProductsOnScreen/>
+    <>
+      <HomeContent/>
+    </>
   );
 }
 
