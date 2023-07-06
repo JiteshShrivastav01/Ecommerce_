@@ -36,3 +36,9 @@
     margin: 0.5rem ; border-radius: 0.5rem; border: none;text-transform: uppercase;
 }
 
+@media screen and (max-width:900px) {
+    .header2{
+        width:20rem ; margin : 1rem auto
+    }
+    
+}

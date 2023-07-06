@@ -1,21 +1,52 @@
 .container{
-    width: 40%;
-    margin-left: 35%;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 3%;
     border: none;
     background-color: skyblue;
-    margin-top: 4rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
 }
 
-.field{
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+.label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
-
-.label{
-    font-size: 1.2rem;margin: 0.3rem auto;
-}
+  
 .input{
-    width: 16rem;height: 3rem;border-radius: 0.5rem 0 0.5rem 0;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
+.btn{
+    max-width: 6rem;
+    margin: 0 auto;
+}
+  
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+  
+.button:hover {
+    background-color: #45a049;
+}
+.button:disabled{
+    background-color: red;
+}
+  
+@media screen and (max-width: 600px) {
+    input{
+      width: 100%;
+    }
+    .container{
+        margin: 6rem 1rem;
+    }
+}
+  

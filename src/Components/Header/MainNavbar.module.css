@@ -3,7 +3,7 @@
     width: 100%;
     position: fixed;
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 20% 60% 20%;
     justify-content: center;
     align-items: center;
     padding: 0.5rem 0;
@@ -26,7 +26,7 @@
     font-size: 1rem;
     background-color:white;color:black;width: 150%;
 }
-li a.active{
+.list a.active{
     font-size: 1rem;color: black;padding: 0 10px;
     background-color:rgb(67, 186, 233);width: 150%;
 }
@@ -49,13 +49,13 @@ li a.active{
     background-position: 0%
 }
 
-@media screen and (max-width : 568px){
+@media screen and (max-width : 900px){
     .navbar{
         display: grid;grid-template-columns: 40% 60%;
         justify-content: space-between;
     }
     .logo-name{
-        font-size: 1.4rem;margin-left: 0.8rem;
+        font-size: 1.2rem;margin-left: 0.8rem;
     }
     .menu-list{
         display: none;
@@ -70,31 +70,35 @@ li a.active{
         justify-content: flex-end;
     }
     .toggleMenu{
-        grid-column: 2/3;margin-left: 1rem;
-        display: grid;
+        grid-column: 2/3;margin-left: 1rem; width: 2rem; height: 2rem;
+        display: grid; border: 1px solid white; border-radius:0.5rem;
         align-items: center;
     }
 
     
     .mobile-menu-list{
         background-color: rgb(241, 218, 218); font-size: 1rem;
+        text-align: center;
         grid-row: 2/3;left: 0;top:0;
         grid-column: 1/3;
         width: 100%;height: 100%;
         justify-content: center;align-items: center;margin-top: 1rem;margin-bottom: 0;
-        display: grid;grid-template-columns: 100%;justify-content: center;align-items:center;
-        z-index: 10;
+        display: grid;grid-template-columns: 100%;align-items:center;
         animation: slideDown 0.3s ease-in-out forwards;
     }
 
     .list{
         width: 100%;
         margin-left: 0;padding: 0.5rem 0rem;
-        border-bottom: 1px solid white;margin-bottom: 0;
+        border-bottom: 1px solid white;margin-bottom: 0;justify-content: center;
+        display: grid;align-items: center;
     }
     .list a{color: black;}
     .list:hover{
         background-color: black;
+    }
+    .list a.active,a:hover{
+        background-color: black;color:white;padding: 0.3rem 0;width:6rem
     }
     
     .list:hover a{color:white;background:none;width: 100%;text-align: center;}

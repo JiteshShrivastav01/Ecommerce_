@@ -12,10 +12,18 @@ const RootPage = ({children}) =>{
     const hideCart=()=>{setShowCart(false)}
     return(
         <CartContextProvider>
-          <MainNavbar onShow={showCartOnScreen}/>
-          {showCart && <Cart  onClose={hideCart}/>}       
-          {children}
-          <MainFooter/>
+        <div style={{minHeight:'100%',position:'relative'}} >
+          <div >
+            <MainNavbar onShow={showCartOnScreen}/>
+            {showCart && <Cart  onClose={hideCart}/>}       
+            <div style={{marginTop:'3.5rem'}}>
+              {children}
+            </div>
+          </div>
+          <div style={{position:'absolute',width:'100%',marginTop:'20vh'}}>
+            <MainFooter/>
+          </div>
+        </div>
         </CartContextProvider>
     )
 }
