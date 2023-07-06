@@ -17,13 +17,16 @@ const MainNavbar = (props) => {
       </div>
       <div className={showMenuList ? classes['mobile-menu-list'] : classes['menu-list']}>
         <li className={classes.list}>
-          <NavLink to="/" className={({isActive})=>isActive ? classes.active : undefined}end>Home</NavLink>
+          <NavLink exact to="/" activeClassName={classes.active}>Home</NavLink>
         </li>
         <li className={classes.list}>
-          <NavLink to="/store" className={({isActive})=>isActive ? classes.active : undefined}>Store</NavLink>
+          <NavLink to="/store" activeClassName={classes.active}>Store</NavLink>
         </li>
         <li className={classes.list}>
-          <NavLink to="about" className={({isActive})=>isActive ? classes.active : undefined}>About</NavLink>
+          <NavLink to="/about" activeClassName={classes.active}>About</NavLink>
+        </li>
+        <li className={classes.list}>
+          <NavLink to="/contactus" activeClassName={classes.active}>Contact US</NavLink>
         </li>
       </div>
       <div className={classes.btn}>

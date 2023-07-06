@@ -1,0 +1,21 @@
+.container{
+    width: 40%;
+    margin-left: 35%;
+    padding: 3%;
+    border: none;
+    background-color: skyblue;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.field{
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.label{
+    font-size: 1.2rem;margin: 0.3rem auto;
+}
+.input{
+    width: 16rem;height: 3rem;border-radius: 0.5rem 0 0.5rem 0;
+}

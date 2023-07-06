@@ -16,7 +16,7 @@
 .menu-list{
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: 33% 34% 33%;justify-content: space-evenly;
+    grid-template-columns:repeat(4,25%);justify-content: space-evenly;
 }
 .list{width: 100%;margin: 0 10px;display: grid;justify-content: space-evenly}
 .list a{
@@ -26,7 +26,7 @@
     font-size: 1rem;
     background-color:white;color:black;width: 150%;
 }
-.active{
+li a.active{
     font-size: 1rem;color: black;padding: 0 10px;
     background-color:rgb(67, 186, 233);width: 150%;
 }
