@@ -2,7 +2,7 @@
 .heading{
     text-align: center;grid-column: 2/3;
 }
-.cartClose{display: flex;justify-content: center;width: 3rem;height: 3rem;align-items: center;}
+.cartClose{display: flex;justify-content: center;width: 2rem;height: 2rem;align-items: center;background-color: rgb(240, 30, 30);border: none;border-radius: 0.3rem;color: white;}
 .scroll{
     max-height:300px;
     overflow: auto;
@@ -34,6 +34,10 @@
 .purchaseButton{
     display: flex;justify-content: center; margin: 3rem;
 }
+.responsiveBtn{
+    background-color: rgb(240, 30, 30);color: white;padding:0.2rem 0.3rem;border: none;
+    border-radius: 0.2rem;
+}
 .amount{display: flex;justify-content: flex-end;margin-top: 0.2rem;margin-right:0.4rem;}
 
 @media screen and (max-width:568px) {
@@ -46,7 +50,7 @@
     .QuantityInput{width: 2.5rem;}
     .Item{display: grid;grid-template-columns: 1fr 2fr;}
     .tr{padding: 0;}
-
-
+    .table{font-size: 1rem;}
 }
+
 

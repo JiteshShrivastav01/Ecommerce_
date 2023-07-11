@@ -25,8 +25,8 @@ const Cart=(props)=>{
         <Modal onClose={props.onClose}>
            <div className={classes.cartHead}>
               <h1 className={classes.heading}>Cart</h1>
-              <div className={classes.cartClose}>
-                <Button variant="danger" className={classes.responsiveBtn1} onClick={props.onClose}>X</Button>
+              <div>
+                <button className={classes.cartClose} onClick={props.onClose}><FaTimes/></button>
               </div>
            </div>
            <div className={classes.scroll}>
@@ -53,7 +53,7 @@ const Cart=(props)=>{
                             <input type="number" value={item.quantity} onChange={(event)=>QuantityHandler(event,item.name)} min={1} className={classes.QuantityInput} />
                         </td>
                         <td className="removeButton">
-                            <Button className={classes.responsiveBtn} variant="danger" onClick={()=>RemoveItem(item.name)}><FaTimes/></Button>
+                            <button className={classes.responsiveBtn} onClick={()=>RemoveItem(item.name)}><FaTimes/></button>
                         </td>
                     </tr>
                 ))

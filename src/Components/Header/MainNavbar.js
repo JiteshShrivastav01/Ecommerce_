@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Button,Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { GiHamburgerMenu} from 'react-icons/gi';
 import classes from './MainNavbar.module.css';
 import CartContext from '../Context/CartContext';
 import { NavLink } from 'react-router-dom';
 import AuthContext from '../Context/AuthContext';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart , FaUserCircle } from 'react-icons/fa';
+
+
 
 
 
@@ -34,21 +36,22 @@ const MainNavbar = (props) => {
         </li>}
       </div>
       <div className={classes.btn}>
-        {ctx2.isLoggedIn && <div className={classes['cart-button']}>
-          <Button variant="primary" onClick={props.onShow} className={classes.cart}>
-            <span><FaShoppingCart/></span>
-            <span className={classes.cartCircle}>{ctx.cart.length}</span>
-          </Button>
-        </div>}
-        
         <div>
           {!ctx2.isLoggedIn && <li className={classes.list2}>
             <NavLink to="/login" className={classes.loginBtn}>Login</NavLink>
           </li>}
           {ctx2.isLoggedIn && <li className={classes.list2}>
-            <NavLink to="/"  className={classes.loginBtn} onClick={ctx2.logout} exact>Logout</NavLink>
+            <NavLink to="/login"  className={classes.loginBtn} onClick={ctx2.logout} exact>Logout</NavLink>
           </li>}
         </div>
+        {ctx2.isLoggedIn && <div className={classes['cart-button']}>
+          <button onClick={props.onShow} className={classes.cart}>
+            <span><FaShoppingCart/></span>
+            <span className={classes.cartCircle}>{ctx.cart.length}</span>
+          </button>
+        </div>}
+        {ctx2.isLoggedIn &&
+        <button className={classes.userBtn}><FaUserCircle className={classes.userIcon} onClick={props.showProfile}/></button>}
         <button className={classes.toggleMenu} onClick={()=>setShowMenuList(!showMenuList)}>
           <GiHamburgerMenu/>
         </button>
