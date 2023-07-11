@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
+import CartContextProvider from './Components/Context/CartContextProvider';
+import AuthContextProvider from './Components/Context/AuthContextProvider';
 
 // react bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,9 +15,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-     <App />
-    </BrowserRouter>
+    <AuthContextProvider>
+      <CartContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </CartContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>
 );
 

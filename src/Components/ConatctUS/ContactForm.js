@@ -1,12 +1,14 @@
 // ContactForm.js
 import React, { useState } from 'react';
 import classes from './ContactForm.module.css'
+import {Prompt} from 'react-router-dom'
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [isValid,setIsValid]=useState(false)
+  const [formFocused,setFormFocused]=useState(false)
   
   const NameHandler=(e)=>{
     setName(e.target.value)
@@ -42,7 +44,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const UserData={name : name , email:email , phoneNumber : phoneNumber}
-    const response=fetch('https://movieecommerce-default-rtdb.firebaseio.com/ContactUsUser.json',{
+    const response=fetch('https://ecommerce2-6ebd1-default-rtdb.firebaseio.com/ContactUsUser.json',{
         method:'POST',
         body:JSON.stringify(UserData)
     })
@@ -52,10 +54,13 @@ const ContactForm = () => {
     setPhoneNumber('');
     setIsValid(false)
   };
+  const FocusedOn=()=>{setFormFocused(true)}
+  const FocusedOff=()=>{setFormFocused(false)}
 
   return (
     <div className={classes.container}>
-    <form onSubmit={handleSubmit}>
+    <Prompt when={formFocused} message={(location)=>'Are your sure want to leave this page'}/>
+    <form onSubmit={handleSubmit} onFocus={FocusedOn}>
       <div className={classes.field}>
         <label htmlFor="name" className={classes.label}>Name:</label>
         <input className={classes.input}
@@ -84,7 +89,7 @@ const ContactForm = () => {
         />
       </div>
       <div className={classes.btn}>
-       <button type="submit" disabled={!isValid} className={classes.button}>Submit</button>
+       <button onClick={FocusedOff} type="submit" disabled={!isValid} className={classes.button}>Submit</button>
       </div>
     </form>
     </div>

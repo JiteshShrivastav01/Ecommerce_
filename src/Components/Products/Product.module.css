@@ -4,6 +4,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 14px;
     background-color: white;
+    border: none;
 }
 
 .ProductsScreen{
@@ -26,8 +27,8 @@
 .product{
     margin: 0.2rem 0.8rem; 
 }
-a{
-    text-decoration: none;color: black;
+.product a{
+  text-decoration: none;color: black;
 }
 
 .Price{

@@ -41,17 +41,12 @@
     .QuantityInput{width: 3rem;}
 }
 
-@media screen and (max-width:468px) {
-    .img{width:40px;height: 40px;}
+@media screen and (max-width:428px) {
+    .img{width:35px;height: 35px;}
     .QuantityInput{width: 2.5rem;}
     .Item{display: grid;grid-template-columns: 1fr 2fr;}
+    .tr{padding: 0;}
+
+
 }
 
-@media screen and (max-width:420px) {
-    .table{font-size: 1rem;}
-    .responsiveBtn{ font-size: 0.8rem;padding: 0.4rem 0rem;text-align: left;
-    margin-left: 0.2rem;}
-    .tr{padding: 0;}
-    .img{width: 35px;height: 35px;}
-    .Title{margin-left: 0.1rem;font-size: 0.8rem;}
-}
