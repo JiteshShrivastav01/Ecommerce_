@@ -30,7 +30,7 @@ const CartContextProvider=(props)=>{
     const quantityHandler=(Item)=>{
         setCart((prevCart)=>
             prevCart.map((item)=>{
-              if(item.name===Item.name){
+              if(item.title===Item.title){
                 return Item
               }
             return item})

@@ -10,7 +10,7 @@
     font-weight: bold;
 }
 .header2{
-    font-size: 1.5rem; display: flex; width: 20%;margin-left: 40%;
+    font-size: 1.5rem; display: flex; max-width: 30%;margin-left: 35%;
     border: 1px solid  rgb(67, 186, 233); padding: 0.5rem 0.6rem; align-items: center;justify-content: center;
 }
 .playIcon{
@@ -25,6 +25,7 @@
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
 }
 .tr{
     margin: 0.5rem 1rem;text-align: center;
@@ -38,7 +39,7 @@
 
 @media screen and (max-width:900px) {
     .header2{
-        width:20rem ; margin : 1rem auto
+        max-width:20rem ; margin : 2rem auto;
     }
     
 }

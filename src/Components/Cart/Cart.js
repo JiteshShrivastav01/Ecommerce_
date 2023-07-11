@@ -15,8 +15,8 @@ const Cart=(props)=>{
         ctx.offCart(newCart)
     }
 
-    const QuantityHandler=(event,name)=>{
-        const change=cartElements.find((item)=>item.name===name)
+    const QuantityHandler=(event,title)=>{
+        const change=cartElements.find((item)=>item.title===title)
         change.quantity=event.target.value
         ctx.quantityChange(change)
     }
@@ -43,14 +43,14 @@ const Cart=(props)=>{
                 cartElements.map((item,index)=>(
                     <tr key={index} className={classes.tr}>
                         <td className={classes.Item}>
-                           <img src={item.imageUrl} alt={item.title} className={classes.img} />
-                           <h5 className={classes.Title}>{item.name}</h5>
+                           <img src={item.imageUrl} alt={item.img} className={classes.img} />
+                           <h5 className={classes.Title}>{item.title}</h5>
                         </td>
                         <td className={classes.Price}>
                             ${item.price}
                         </td>
                         <td className={classes.Quantity}>
-                            <input type="number" value={item.quantity} onChange={(event)=>QuantityHandler(event,item.name)} min={1} className={classes.QuantityInput} />
+                            <input type="number" value={item.quantity} onChange={(event)=>QuantityHandler(event,item.title)} min={1} className={classes.QuantityInput} />
                         </td>
                         <td className="removeButton">
                             <button className={classes.responsiveBtn} onClick={()=>RemoveItem(item.name)}><FaTimes/></button>

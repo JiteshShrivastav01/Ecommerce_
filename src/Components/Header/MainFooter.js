@@ -6,7 +6,7 @@ const MainFooter = () => {
   return (
     <footer className={classes.footer}>
       <div className={classes.leftSection}>
-        <p className={classes.name}>TheGenerics</p>
+        <p className={classes.name}>TheOneBook</p>
       </div>
       <div className={classes.rightSection}>
         <FaYoutube color="#FF0000" size={32} className={classes.icon} />

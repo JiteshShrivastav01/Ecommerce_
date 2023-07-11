@@ -19,7 +19,7 @@ const MainNavbar = (props) => {
   return (
     <div className={classes.navbar}>
       <div className={classes['logo-name']}>
-        <Navbar.Brand className={classes.Brand} href="#home">TheGenerics</Navbar.Brand>
+        <Navbar.Brand className={classes.Brand} href="#home">TheOneBook</Navbar.Brand>
       </div>
       <div className={showMenuList ? classes['mobile-menu-list'] : classes['menu-list']}>
         <li className={classes.list}>
