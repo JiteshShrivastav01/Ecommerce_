@@ -54,7 +54,7 @@ const SignUP=()=>{
     return(
         <div className={classes.container}>
         <form onSubmit={SubmitHandler} className={classes.form}>
-            <h2 className={classes.h2}>Registration Form</h2><br/>
+            <h2 className={classes.h2}>Create Account</h2><br/>
             <label htmlFor="Email" className={classes.label}>Email </label>
             <input type="Email" ref={Email} className={classes.input}/>
             <label htmlFor="Password" className={classes.label}>Password</label>

@@ -17,7 +17,7 @@ const HomeContent=()=>{
     return(
         <>
           <header className={classes.header}>
-            <p className={classes.header1}>The One Book</p>
+            <p className={classes.header1}>One Book</p>
             <p className={classes.header2}>Get out Latest Upcoming Book</p>
             <Link to='/about'><img src="" alt="" />
                 <AiFillPlayCircle size='50'  className={classes.playIcon}/>

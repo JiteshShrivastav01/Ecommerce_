@@ -25,6 +25,7 @@
     font-size: 2rem;
     margin-right: 10px;
     align-items: center;
+    cursor: pointer;
   }
   
   .name {

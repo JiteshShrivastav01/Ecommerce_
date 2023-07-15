@@ -10,9 +10,8 @@ const Cart=(props)=>{
     const ctx=useContext(CartContext)
     const cartElements=ctx.cart
 
-    const RemoveItem = (name) =>{
-        const newCart=cartElements.find((item)=>item.name === name )
-        ctx.offCart(newCart)
+    const RemoveItem = (Item) =>{
+        ctx.offCart(Item)
     }
 
     const QuantityHandler=(event,title)=>{
@@ -47,13 +46,13 @@ const Cart=(props)=>{
                            <h5 className={classes.Title}>{item.title}</h5>
                         </td>
                         <td className={classes.Price}>
-                            ${item.price}
+                            ₹{item.price}
                         </td>
                         <td className={classes.Quantity}>
                             <input type="number" value={item.quantity} onChange={(event)=>QuantityHandler(event,item.title)} min={1} className={classes.QuantityInput} />
                         </td>
                         <td className="removeButton">
-                            <button className={classes.responsiveBtn} onClick={()=>RemoveItem(item.name)}><FaTimes/></button>
+                            <button className={classes.responsiveBtn} onClick={()=>RemoveItem(item)}><FaTimes/></button>
                         </td>
                     </tr>
                 ))
@@ -61,7 +60,7 @@ const Cart=(props)=>{
              </tbody>
            </table>
            </div>
-           <h4 className={classes.amount}>Total : ${ctx.totalAmount}</h4>
+           <h4 className={classes.amount}>Total : ₹{ctx.totalAmount}</h4>
            <div className={classes.purchaseButton}>
              <Button variant='primary' className='responsive-button'>Purchase</Button>
            </div>

@@ -5,7 +5,7 @@ const Header=()=>{
     return(
         <>
          <div className={classes.headerStyle}>
-            <h1 className={classes.textStyle}>The One Book</h1>
+            <h1 className={classes.textStyle}> One Book</h1>
          </div>
         </>
     )
